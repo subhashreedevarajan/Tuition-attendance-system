@@ -34,7 +34,9 @@ export default function DashboardPage() {
   if (isCheckingLogin) {
     return (
       <main className="flex min-h-screen items-center justify-center bg-gray-100">
-        <p className="text-gray-500">Loading dashboard...</p>
+        <p className="text-gray-500">
+          Loading dashboard...
+        </p>
       </main>
     );
   }
@@ -138,13 +140,16 @@ export default function DashboardPage() {
             Quick Actions
           </h3>
 
-<div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
 
-            {/* STUDENTS */}
+
+            {/* MANAGE STUDENTS */}
+
             <button
               onClick={() => router.push("/students")}
               className="rounded-2xl bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
+
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-purple-100 text-2xl">
                 👨‍🎓
               </div>
@@ -156,12 +161,17 @@ export default function DashboardPage() {
               <p className="mt-2 text-sm text-gray-500">
                 Add new students and manage student information.
               </p>
+
             </button>
+
+
             {/* DELETE STUDENT */}
+
             <button
               onClick={() => router.push("/students/delete")}
               className="rounded-2xl bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
+
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-red-100 text-2xl">
                 🗑️
               </div>
@@ -173,13 +183,17 @@ export default function DashboardPage() {
               <p className="mt-2 text-sm text-gray-500">
                 Remove a student from your active student list.
               </p>
+
             </button>
 
-            {/* ATTENDANCE */}
+
+            {/* TAKE ATTENDANCE */}
+
             <button
               onClick={() => router.push("/attendance")}
               className="rounded-2xl bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
+
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-green-100 text-2xl">
                 📋
               </div>
@@ -191,14 +205,17 @@ export default function DashboardPage() {
               <p className="mt-2 text-sm text-gray-500">
                 Create today's attendance sheet and mark students.
               </p>
+
             </button>
 
 
-            {/* REPORTS */}
+            {/* ATTENDANCE REPORTS */}
+
             <button
               onClick={() => router.push("/reports")}
               className="rounded-2xl bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
             >
+
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl">
                 📊
               </div>
@@ -210,7 +227,33 @@ export default function DashboardPage() {
               <p className="mt-2 text-sm text-gray-500">
                 View attendance statistics and monthly reports.
               </p>
+
             </button>
+
+
+            {/* ATTENDANCE HISTORY */}
+
+            <button
+              onClick={() =>
+                router.push("/attendance-history")
+              }
+              className="rounded-2xl bg-white p-6 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+            >
+
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-orange-100 text-2xl">
+                🕒
+              </div>
+
+              <h4 className="text-lg font-bold text-gray-900">
+                Attendance History
+              </h4>
+
+              <p className="mt-2 text-sm text-gray-500">
+                View attendance records from previous days.
+              </p>
+
+            </button>
+
 
           </div>
 
@@ -218,11 +261,13 @@ export default function DashboardPage() {
 
 
         {/* TODAY'S ATTENDANCE */}
+
         <section className="mt-8 rounded-2xl bg-white p-6 shadow-sm">
 
           <div className="flex items-center justify-between">
 
             <div>
+
               <h3 className="text-xl font-bold text-gray-900">
                 Today&apos;s Attendance
               </h3>
@@ -230,6 +275,7 @@ export default function DashboardPage() {
               <p className="mt-1 text-sm text-gray-500">
                 No attendance has been created for today.
               </p>
+
             </div>
 
             <button
@@ -242,6 +288,7 @@ export default function DashboardPage() {
           </div>
 
         </section>
+
 
       </div>
 
